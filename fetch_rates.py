@@ -14,7 +14,7 @@ average of the energy-rate tiers from the utility's default residential rate.
 """
 import json, sys, urllib.request, urllib.parse
 
-API_KEY = "PASTE_YOUR_OPENEI_KEY"   # <-- required
+API_KEY = "Lyuxedg7iw03C4RggcUIx8cnoQ8U5M2sMt34tYyV"
 BASE = "https://api.openei.org/utility_rates"
 
 # Starter set: utility "label" pages in URDB for the defaults already in the UI.
