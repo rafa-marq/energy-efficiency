@@ -19,11 +19,11 @@ stand-in and flags it. Verify the non-AC dataset IDs in the script before using.
     # get key: https://openei.org/services/api/signup/   (instant)
     # paste into fetch_rates.py
     python fetch_rates.py             # -> rates.json (starter set of utilities)
-    python fetch_rates.py --zip 10001 # -> single ZIP lookup, prints JSON
+    python fetch_rates.py --zip 10001 # -> rates.json for one ZIP (US avg + local utility)
 
 Source: OpenEI URDB (NREL). Averages the residential energy-rate tiers into one
-representative $/kWh. For the starter set, paste each utility's URDB page ID
-(find at apps.openei.org/USURDB).
+representative $/kWh. The starter set looks each utility up by a representative
+ZIP (edit the ZIPs in fetch_rates.py) — no URDB page IDs to paste.
 
 ## 3. Drop files in place
 Put `energystar_ac.json` and `rates.json` in the same folder as the HTML, or

@@ -17,13 +17,14 @@ import json, sys, urllib.request, urllib.parse
 API_KEY = "Lyuxedg7iw03C4RggcUIx8cnoQ8U5M2sMt34tYyV"
 BASE = "https://api.openei.org/utility_rates"
 
-# Starter set: utility "label" pages in URDB for the defaults already in the UI.
-# (Look these up once at apps.openei.org/USURDB and paste the page IDs.)
+# Starter set: a representative ZIP per utility. ZIP lookup works with just the
+# API key (no URDB page IDs to hunt down) and returns each utility's default
+# residential rate. Edit these ZIPs to match the utilities you want to feature.
+US_AVERAGE = 0.17          # national average $/kWh, used as a labelled fallback
 STARTER = {
-    "US average":        None,          # synthetic fallback, set manually to 0.17
-    "Con Edison (NY)":   "RATE_PAGE_ID_CONED",
-    "PG&E (CA)":         "RATE_PAGE_ID_PGE",
-    "ComEd (IL)":        "RATE_PAGE_ID_COMED",
+    "Con Edison (NY)":   "10001",
+    "PG&E (CA)":         "94103",
+    "ComEd (IL)":        "60601",
 }
 
 def get_json(params):
@@ -45,7 +46,8 @@ def avg_energy_rate(rate):
         return None
     return round(sum(vals) / len(vals), 4)
 
-def by_zip(z):
+def rate_for_zip(z):
+    """(utility_name, avg $/kWh, source_uri) for the default residential rate at a ZIP."""
     data = get_json({
         "version": "latest", "format": "json", "api_key": API_KEY,
         "sector": "Residential", "detail": "full",
@@ -53,35 +55,36 @@ def by_zip(z):
     })
     items = data.get("items", [])
     if not items:
-        print("No rates found for that ZIP.", file=sys.stderr); return
+        return None
     best = items[0]
-    rate = avg_energy_rate(best)
-    print(json.dumps({
-        "zip": z,
-        "utility": best.get("utility"),
-        "rate_name": best.get("name"),
-        "avg_kwh_usd": rate,
-        "source_url": best.get("uri"),
-    }, indent=2))
+    return best.get("utility"), avg_energy_rate(best), best.get("uri")
+
+def write_rates(rows):
+    """Write rates.json in the shape the calculator loads: [{name, rate}, ...]."""
+    with open("rates.json", "w") as f:
+        json.dump(rows, f, indent=2)
+    print("Wrote rates.json", file=sys.stderr)
+    print(json.dumps(rows, indent=2), file=sys.stderr)
+
+def by_zip(z):
+    r = rate_for_zip(z)
+    if not r or r[1] is None:
+        print("No usable rate found for that ZIP.", file=sys.stderr); return
+    util, rate, uri = r
+    write_rates([
+        {"name": "US average", "rate": US_AVERAGE},
+        {"name": f"{util} (ZIP {z})", "rate": rate, "source_url": uri},
+    ])
 
 def starter_set():
-    out = []
-    for name, page in STARTER.items():
-        if not page:
-            out.append({"name": name, "rate": 0.17, "note": "national average (manual)"})
-            continue
-        data = get_json({
-            "version": "latest", "format": "json", "api_key": API_KEY,
-            "detail": "full", "getpage": page, "limit": 1,
-        })
-        items = data.get("items", [])
-        if items:
-            out.append({"name": name, "rate": avg_energy_rate(items[0]),
-                        "utility": items[0].get("utility")})
-    with open("rates.json", "w") as f:
-        json.dump(out, f, indent=2)
-    print("Wrote rates.json", file=sys.stderr)
-    print(json.dumps(out, indent=2), file=sys.stderr)
+    rows = [{"name": "US average", "rate": US_AVERAGE, "note": "national average (manual)"}]
+    for name, z in STARTER.items():
+        r = rate_for_zip(z)
+        if r and r[1] is not None:
+            rows.append({"name": name, "rate": r[1], "utility": r[0]})
+        else:
+            print(f"  ! no rate returned for {name} (ZIP {z}) — skipped", file=sys.stderr)
+    write_rates(rows)
 
 if __name__ == "__main__":
     if API_KEY == "PASTE_YOUR_OPENEI_KEY":
