@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "product.schema.json",
+  "title": "Product record",
+  "description": "One appliance model as published by an official efficiency program. Values are copied from the source; missing values are null, never estimated.",
+  "type": "object",
+  "required": ["id", "country", "category", "brand", "model", "annual_kwh", "kwh_basis", "efficiency", "capacity", "attributes", "certifications", "source_record_id"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z]{2}-[a-z0-9]+-[A-Za-z0-9_.-]+$"},
+    "country": {"type": "string", "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2 market the rating applies to."},
+    "category": {"type": "string", "description": "Key from schema/categories.json."},
+    "brand": {"type": "string", "minLength": 1},
+    "model": {"type": "string", "minLength": 1},
+    "annual_kwh": {"type": ["number", "null"], "exclusiveMinimum": 0, "description": "Annual electricity use under the country's official test procedure."},
+    "kwh_basis": {"type": "string", "description": "Which test procedure / label the annual_kwh figure comes from."},
+    "efficiency": {
+      "type": ["object", "null"],
+      "required": ["metric", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "metric": {"type": "string"},
+        "value": {"type": "number"},
+        "unit": {"type": ["string", "null"]}
+      }
+    },
+    "capacity": {
+      "type": ["object", "null"],
+      "required": ["value", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {"type": "number", "exclusiveMinimum": 0},
+        "unit": {"type": "string"}
+      }
+    },
+    "attributes": {"type": "object", "additionalProperties": {"type": ["string", "number", "boolean", "null"]}},
+    "certifications": {"type": "array", "items": {"type": "string"}},
+    "source_record_id": {"type": "string", "description": "The record's ID in the upstream source, for traceability."}
+  }
+}

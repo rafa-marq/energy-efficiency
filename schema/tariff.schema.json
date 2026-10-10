@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tariff.schema.json",
+  "title": "Tariff record",
+  "description": "A residential electricity price for a region or utility. price_per_kwh is null when the source has no single per-kWh price (e.g. tiered or time-of-use structures).",
+  "type": "object",
+  "required": ["id", "country", "region", "utility", "currency", "price_per_kwh", "price_basis", "taxes_included", "period", "source_record_id"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z]{2}-[a-z0-9]+-[A-Za-z0-9_.-]+$"},
+    "country": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "region": {
+      "type": ["object", "null"],
+      "required": ["type", "code", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {"enum": ["country", "state", "municipality", "postal_code"]},
+        "code": {"type": "string"},
+        "name": {"type": "string"}
+      }
+    },
+    "utility": {
+      "type": ["object", "null"],
+      "required": ["id", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string"},
+        "name": {"type": "string"}
+      }
+    },
+    "currency": {"type": "string", "pattern": "^[A-Z]{3}$"},
+    "price_per_kwh": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "price_basis": {"type": "string", "description": "Exactly what the price represents and how it was obtained, including any formula."},
+    "taxes_included": {"type": ["boolean", "null"], "description": "null = not stated by the source."},
+    "period": {
+      "type": "object",
+      "required": ["from", "to"],
+      "additionalProperties": false,
+      "properties": {
+        "from": {"type": "string"},
+        "to": {"type": ["string", "null"]}
+      }
+    },
+    "source_record_id": {"type": "string"},
+    "structure": {
+      "type": "object",
+      "description": "Optional summary of a utility tariff's shape, copied from the source.",
+      "required": ["type", "fixed_monthly", "energy_rate_min", "energy_rate_max"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {"type": "array", "items": {"enum": ["flat", "tiered", "seasonal", "time_of_use"]}},
+        "fixed_monthly": {"type": ["number", "null"]},
+        "energy_rate_min": {"type": ["number", "null"]},
+        "energy_rate_max": {"type": ["number", "null"]}
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$comment": "Shared category keys. Every country maps its source data onto these. Add a category here before using it in data/.",
+  "room_ac": {
+    "name": "Room air conditioner",
+    "capacity_unit": "Btu/h",
+    "notes": "Window, through-the-wall and portable units. Mini-split/split systems are a separate category (not yet defined)."
+  },
+  "refrigerator": {
+    "name": "Refrigerator / refrigerator-freezer",
+    "capacity_unit": "ft3"
+  },
+  "clothes_dryer": {
+    "name": "Clothes dryer",
+    "capacity_unit": "ft3",
+    "notes": "For gas dryers, annual_kwh covers electricity only; gas consumption is not included."
+  },
+  "clothes_washer": {
+    "name": "Clothes washer",
+    "capacity_unit": "ft3"
+  },
+  "dishwasher": {
+    "name": "Dishwasher",
+    "capacity_unit": "place settings"
+  }
+}
