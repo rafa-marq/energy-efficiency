@@ -1,0 +1,33 @@
+name: refresh-data
+# Re-fetch all sources weekly and open a PR with the changes, so every data
+# update is reviewable. Needs repo secrets EIA_API_KEY (and optionally
+# SOCRATA_APP_TOKEN), and "Allow GitHub Actions to create pull requests"
+# enabled under Settings -> Actions -> General.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Fetch US
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+        run: |
+          uv run python -m sources.us.energystar
+          uv run python -m sources.us.eia
+      - run: uv run python -m tools.validate
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data/refresh
+          commit-message: "data: weekly refresh"
+          title: "data: weekly refresh"
+          body: "Automated re-fetch of all sources. Review the diff before merging."

@@ -1,0 +1,1003 @@
+{
+ "dataset": "us/tariffs/eia_state_average",
+ "kind": "tariff",
+ "source": {
+  "name": "EIA Electricity Retail Sales (Forms EIA-826, EIA-861, EIA-861M)",
+  "publisher": "US Energy Information Administration",
+  "url": "https://www.eia.gov/opendata/browser/electricity/retail-sales",
+  "license": "Public domain (US Government work)",
+  "notes": "EIA does not state whether revenue includes taxes, so taxes_included is null."
+ },
+ "fetched_at": "2026-10-10T14:20:34Z",
+ "count": 52,
+ "records": [
+  {
+   "id": "us-eia-AK",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "AK",
+    "name": "Alaska"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2685,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/AK/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-AL",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "AL",
+    "name": "Alabama"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1644,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/AL/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-AR",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "AR",
+    "name": "Arkansas"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1343,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/AR/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-AZ",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "AZ",
+    "name": "Arizona"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.154,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/AZ/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-CA",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "CA",
+    "name": "California"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.3299,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/CA/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-CO",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "CO",
+    "name": "Colorado"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1631,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-05 to 2026-04. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-05",
+    "to": "2026-04"
+   },
+   "source_record_id": "retail-sales/RES/CO/2025-05..2026-04"
+  },
+  {
+   "id": "us-eia-CT",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "CT",
+    "name": "Connecticut"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2799,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/CT/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-DC",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "DC",
+    "name": "District of Columbia"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.242,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/DC/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-DE",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "DE",
+    "name": "Delaware"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1779,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/DE/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-FL",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "FL",
+    "name": "Florida"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1539,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/FL/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-GA",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "GA",
+    "name": "Georgia"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1512,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/GA/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-HI",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "HI",
+    "name": "Hawaii"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.4351,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/HI/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-IA",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "IA",
+    "name": "Iowa"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1413,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/IA/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-ID",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "ID",
+    "name": "Idaho"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1265,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/ID/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-IL",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "IL",
+    "name": "Illinois"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1879,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/IL/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-IN",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "IN",
+    "name": "Indiana"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1694,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/IN/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-KS",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "KS",
+    "name": "Kansas"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1509,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/KS/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-KY",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "KY",
+    "name": "Kentucky"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1392,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/KY/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-LA",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "LA",
+    "name": "Louisiana"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1299,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/LA/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-MA",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "MA",
+    "name": "Massachusetts"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.3043,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/MA/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-MD",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "MD",
+    "name": "Maryland"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2208,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/MD/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-ME",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "ME",
+    "name": "Maine"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2931,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/ME/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-MI",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "MI",
+    "name": "Michigan"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2105,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/MI/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-MN",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "MN",
+    "name": "Minnesota"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1622,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/MN/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-MO",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "MO",
+    "name": "Missouri"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1395,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/MO/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-MS",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "MS",
+    "name": "Mississippi"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1477,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/MS/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-MT",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "MT",
+    "name": "Montana"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1384,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/MT/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-NC",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "NC",
+    "name": "North Carolina"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1477,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/NC/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-ND",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "ND",
+    "name": "North Dakota"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1232,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/ND/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-NE",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "NE",
+    "name": "Nebraska"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1286,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/NE/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-NH",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "NH",
+    "name": "New Hampshire"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2667,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/NH/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-NJ",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "NJ",
+    "name": "New Jersey"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2378,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/NJ/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-NM",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "NM",
+    "name": "New Mexico"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1522,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-04 to 2026-03. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-04",
+    "to": "2026-03"
+   },
+   "source_record_id": "retail-sales/RES/NM/2025-04..2026-03"
+  },
+  {
+   "id": "us-eia-NV",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "NV",
+    "name": "Nevada"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1336,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/NV/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-NY",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "NY",
+    "name": "New York"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2839,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/NY/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-OH",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "OH",
+    "name": "Ohio"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1825,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/OH/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-OK",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "OK",
+    "name": "Oklahoma"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.137,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/OK/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-OR",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "OR",
+    "name": "Oregon"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.155,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/OR/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-PA",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "PA",
+    "name": "Pennsylvania"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.207,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/PA/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-RI",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "RI",
+    "name": "Rhode Island"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.2927,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/RI/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-SC",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "SC",
+    "name": "South Carolina"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1564,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/SC/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-SD",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "SD",
+    "name": "South Dakota"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.142,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/SD/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-TN",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "TN",
+    "name": "Tennessee"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1356,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/TN/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-TX",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "TX",
+    "name": "Texas"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1596,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/TX/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-US",
+   "country": "US",
+   "region": {
+    "type": "country",
+    "code": "US",
+    "name": "U.S. Total"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1801,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/US/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-UT",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "UT",
+    "name": "Utah"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1332,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/UT/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-VA",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "VA",
+    "name": "Virginia"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1648,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/VA/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-VT",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "VT",
+    "name": "Vermont"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.238,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/VT/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-WA",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "WA",
+    "name": "Washington"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1412,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/WA/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-WI",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "WI",
+    "name": "Wisconsin"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1874,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/WI/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-WV",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "WV",
+    "name": "West Virginia"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1548,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/WV/2025-08..2026-07"
+  },
+  {
+   "id": "us-eia-WY",
+   "country": "US",
+   "region": {
+    "type": "state",
+    "code": "WY",
+    "name": "Wyoming"
+   },
+   "utility": null,
+   "currency": "USD",
+   "price_per_kwh": 0.1401,
+   "price_basis": "Average residential price: sum of EIA residential revenue / sum of residential sales, 2025-08 to 2026-07. An average across all residential customers as reported to EIA, not a specific tariff.",
+   "taxes_included": null,
+   "period": {
+    "from": "2025-08",
+    "to": "2026-07"
+   },
+   "source_record_id": "retail-sales/RES/WY/2025-08..2026-07"
+  }
+ ]
+}

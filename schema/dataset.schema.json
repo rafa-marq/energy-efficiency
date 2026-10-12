@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dataset.schema.json",
+  "title": "Dataset file",
+  "description": "Envelope for every file under data/. Records are either products or tariffs.",
+  "type": "object",
+  "required": ["dataset", "kind", "source", "fetched_at", "count", "records"],
+  "additionalProperties": false,
+  "properties": {
+    "dataset": {"type": "string", "pattern": "^[a-z]{2}/(products|tariffs)/[a-z0-9_]+$"},
+    "kind": {"enum": ["product", "tariff"]},
+    "source": {
+      "type": "object",
+      "required": ["name", "publisher", "url", "license"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string"},
+        "publisher": {"type": "string"},
+        "url": {"type": "string", "format": "uri"},
+        "license": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "fetched_at": {"type": "string", "format": "date-time"},
+    "count": {"type": "integer", "minimum": 0},
+    "records": {"type": "array"}
+  }
+}
