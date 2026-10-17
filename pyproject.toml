@@ -3,6 +3,7 @@ name = "truewatt-data"
 version = "0.1.0"
 description = "Open, source-traceable database of appliance energy use and electricity prices, by country."
 requires-python = ">=3.10"
+license = "MIT"
 dependencies = []  # fetchers are stdlib-only so contributors can run them anywhere
 
 [dependency-groups]

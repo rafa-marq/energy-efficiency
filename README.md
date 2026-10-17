@@ -69,7 +69,7 @@ A weekly GitHub Action re-fetches everything and opens a PR with the diff.
 
 ## Licenses
 
-Code: see LICENSE (to be chosen). Data keeps its upstream terms, recorded in each
+Code: MIT (see [LICENSE](LICENSE)). Data keeps its upstream terms, recorded in each
 file's `source.license`. US federal data (ENERGY STAR, EIA) is public domain.
 
 The prototype calculator UI is in `truecost-energy.html`; it still uses sample data and
