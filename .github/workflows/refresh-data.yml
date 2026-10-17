@@ -24,6 +24,8 @@ jobs:
         run: |
           uv run python -m sources.us.energystar
           uv run python -m sources.us.eia
+      - name: Fetch BR
+        run: uv run python -m sources.br.aneel
       - run: uv run python -m tools.validate
       - uses: peter-evans/create-pull-request@v7
         with:

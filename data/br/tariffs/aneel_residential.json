@@ -1,0 +1,1869 @@
+{
+ "dataset": "br/tariffs/aneel_residential",
+ "kind": "tariff",
+ "source": {
+  "name": "Tarifas de aplicação das distribuidoras de energia elétrica",
+  "publisher": "Agência Nacional de Energia Elétrica (ANEEL)",
+  "url": "https://dadosabertos.aneel.gov.br/dataset/tarifas-distribuidoras-energia-eletrica",
+  "license": "Open Data Commons Open Database License (ODbL)",
+  "notes": "Tariffs before taxes (ICMS, PIS/COFINS), public lighting fee and tariff flag surcharges. ANEEL does not map distributors to states in this dataset."
+ },
+ "fetched_at": "2026-10-17T13:29:29Z",
+ "count": 103,
+ "records": [
+  {
+   "id": "br-aneel-01229747000189",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "01229747000189",
+    "name": "CERGAPA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.54511,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 292,07 + TE 253,04 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.768, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/649568"
+  },
+  {
+   "id": "br-aneel-01377555000110",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "01377555000110",
+    "name": "CHESP"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.81975,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 529,06 + TE 290,69 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.545, DE 11 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-11-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/584133"
+  },
+  {
+   "id": "br-aneel-01543032000104",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "01543032000104",
+    "name": "EQUATORIAL GO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.89181,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 567,67 + TE 324,14 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.544, DE 21 DE OUTUBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-10-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/604277"
+  },
+  {
+   "id": "br-aneel-02016440000162",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "02016440000162",
+    "name": "RGE"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.94461,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 588,50 + TE 356,11 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.590, DE 16 DE JUNHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-06-19",
+    "to": "2027-06-18"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/626518"
+  },
+  {
+   "id": "br-aneel-02302100000106",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "02302100000106",
+    "name": "EDP SP"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.7867,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 456,67 + TE 330,03 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.541, DE 14 DE OUTUBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-10-22"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/596346"
+  },
+  {
+   "id": "br-aneel-02328280000197",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "02328280000197",
+    "name": "ELEKTRO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.89163,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 565,27 + TE 326,36 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.605, DE 26 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-27",
+    "to": "2027-08-26"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/642982"
+  },
+  {
+   "id": "br-aneel-02341467000120",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "02341467000120",
+    "name": "Âmbar Amazonas"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.87571,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 594,60 + TE 281,11 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.588, DE 19 DE MAIO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-05-26",
+    "to": "2027-05-25"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/623036"
+  },
+  {
+   "id": "br-aneel-02341470000144",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "02341470000144",
+    "name": "Âmbar Roraima"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.78947,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 444,78 + TE 344,69 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.565, DE 20 DE JANEIRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-25",
+    "to": "2027-01-24"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/613089"
+  },
+  {
+   "id": "br-aneel-03467321000199",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "03467321000199",
+    "name": "EMT"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.89942,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 605,28 + TE 294,14 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.581, DE 22 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-08",
+    "to": "2027-04-07"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/616129"
+  },
+  {
+   "id": "br-aneel-04065033000170",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "04065033000170",
+    "name": "EAC"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.82971,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 715,85 + TE 113,86 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.318, DE 24 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-26",
+    "to": "2026-12-12"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/639994"
+  },
+  {
+   "id": "br-aneel-04172213000151",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "04172213000151",
+    "name": "CPFL-PIRATINING"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.73969,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 395,64 + TE 344,05 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.543, DE 21 DE OUTUBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-10-22"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/592968"
+  },
+  {
+   "id": "br-aneel-04368898000106",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "04368898000106",
+    "name": "COPEL-DIS"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.76802,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 457,17 + TE 310,85 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.592, DE 23 DE JUNHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-06-24",
+    "to": "2027-06-23"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/627900"
+  },
+  {
+   "id": "br-aneel-04895728000180",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "04895728000180",
+    "name": "EQUATORIAL PA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.04322,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 754,30 + TE 288,92 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.608, DE 18 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-18",
+    "to": "2027-08-06"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/646097"
+  },
+  {
+   "id": "br-aneel-05914650000166",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "05914650000166",
+    "name": "ERO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.76244,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 703,59 + TE 58,85 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.320, DE 24 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-26",
+    "to": "2026-12-12"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/640983"
+  },
+  {
+   "id": "br-aneel-05965546000109",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "05965546000109",
+    "name": "CEA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.82515,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 784,10 + TE 41,05 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-13",
+    "to": "2027-05-24"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/616676"
+  },
+  {
+   "id": "br-aneel-06272793000184",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "06272793000184",
+    "name": "EQUATORIAL MA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.88884,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 607,54 + TE 281,30 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.604, DE 26 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-28",
+    "to": "2027-08-27"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/643947"
+  },
+  {
+   "id": "br-aneel-06840748000189",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "06840748000189",
+    "name": "EQUATORIAL PI"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.94669,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 647,22 + TE 299,47 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.555, DE 25 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-12-01"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/605990"
+  },
+  {
+   "id": "br-aneel-06981180000116",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "06981180000116",
+    "name": "CEMIG-D"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.90329,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 593,08 + TE 310,21 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.589, DE 26 DE MAIO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-05-28",
+    "to": "2027-05-27"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/624390"
+  },
+  {
+   "id": "br-aneel-07047251000170",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "07047251000170",
+    "name": "ENEL CE"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.70175,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 488,49 + TE 213,26 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.324, DE 24 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-26",
+    "to": "2027-04-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/640443"
+  },
+  {
+   "id": "br-aneel-07282377000120",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "07282377000120",
+    "name": "ESS"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.81424,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 492,68 + TE 321,56 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.599, DE 15 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-12",
+    "to": "2027-07-11"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/630436"
+  },
+  {
+   "id": "br-aneel-07522669000192",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "07522669000192",
+    "name": "Neoenergia Brasília"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.82672,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 423,92 + TE 402,80 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.542, DE 21 DE OUTUBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-10-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/610295"
+  },
+  {
+   "id": "br-aneel-08324196000181",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "08324196000181",
+    "name": "COSERN"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.7758,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 482,36 + TE 293,44 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.573, DE 22 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-22",
+    "to": "2027-04-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/618000"
+  },
+  {
+   "id": "br-aneel-08336783000190",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "08336783000190",
+    "name": "CELESC"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.75975,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 414,04 + TE 345,71 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.602, DE 21 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-22",
+    "to": "2027-08-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/639528"
+  },
+  {
+   "id": "br-aneel-08467115000100",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "08467115000100",
+    "name": "CEEE-D"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.822,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 478,63 + TE 343,37 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.547, DE 18 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-11-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/567017"
+  },
+  {
+   "id": "br-aneel-09095183000140",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "09095183000140",
+    "name": "EPB"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.7097,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 460,32 + TE 249,38 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.603, DE 28 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-28",
+    "to": "2027-08-27"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/643424"
+  },
+  {
+   "id": "br-aneel-09257558000121",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "09257558000121",
+    "name": "CERTEL ENERGIA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.9135,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 587,65 + TE 325,85 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.842, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/635794"
+  },
+  {
+   "id": "br-aneel-09364804000144",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "09364804000144",
+    "name": "Ceraçá"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.76189,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 475,05 + TE 286,84 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.763, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/648039"
+  },
+  {
+   "id": "br-aneel-10532365000110",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "10532365000110",
+    "name": "CERAL-DIS"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.73064,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 557,67 + TE 172,97 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.811, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/633430"
+  },
+  {
+   "id": "br-aneel-10835932000108",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "10835932000108",
+    "name": "Neoenergia PE"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.79886,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 535,21 + TE 263,65 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.583, DE 28 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-29",
+    "to": "2027-04-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/622112"
+  },
+  {
+   "id": "br-aneel-11615872000180",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "11615872000180",
+    "name": "CERSAD DISTRIBUI"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.40502,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 265,56 + TE 139,46 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.772, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/651506"
+  },
+  {
+   "id": "br-aneel-11810343000138",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "11810343000138",
+    "name": "CODESAM"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.66618,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 387,68 + TE 278,50 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.780, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/653039"
+  },
+  {
+   "id": "br-aneel-12272084000100",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "12272084000100",
+    "name": "EQUATORIAL AL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.85141,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 650,34 + TE 201,07 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.584, DE 28 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-05-03",
+    "to": "2027-05-02"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/622564"
+  },
+  {
+   "id": "br-aneel-13017462000163",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "13017462000163",
+    "name": "ESE"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.75461,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 482,80 + TE 271,81 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.575, DE 22 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-22",
+    "to": "2027-04-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/619942"
+  },
+  {
+   "id": "br-aneel-13107842000199",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "13107842000199",
+    "name": "CERCOS"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.0144,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 716,76 + TE 297,64 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 1.902, DE 26 DE MAIO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-05-29",
+    "to": "2027-05-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/625144"
+  },
+  {
+   "id": "br-aneel-13255658000196",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "13255658000196",
+    "name": "SULGIPE"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.71881,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 529,09 + TE 189,72 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.321, DE 24 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-26",
+    "to": "2027-05-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/642030"
+  },
+  {
+   "id": "br-aneel-15139629000194",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "15139629000194",
+    "name": "COELBA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.87773,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 620,08 + TE 257,65 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.578, DE 22 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-22",
+    "to": "2027-04-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/617485"
+  },
+  {
+   "id": "br-aneel-15413826000150",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "15413826000150",
+    "name": "EMS"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.9866,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 662,01 + TE 324,59 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.582, DE 22 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-22",
+    "to": "2027-04-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/619033"
+  },
+  {
+   "id": "br-aneel-19527639000158",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "19527639000158",
+    "name": "EMR"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.91899,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 558,10 + TE 360,89 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.591, DE 19 DE JUNHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-06-22",
+    "to": "2027-06-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/626940"
+  },
+  {
+   "id": "br-aneel-23664303000104",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "23664303000104",
+    "name": "DMED"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.61757,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 396,43 + TE 221,14 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.548, DE 18 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-11-17"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/594670"
+  },
+  {
+   "id": "br-aneel-25086034000171",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "25086034000171",
+    "name": "ETO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.99278,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 683,27 + TE 309,51 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.323, DE 24 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-26",
+    "to": "2027-08-25"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/641595"
+  },
+  {
+   "id": "br-aneel-27485069000109",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "27485069000109",
+    "name": "ELFSM"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.82489,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 490,53 + TE 334,36 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.678, DE 22 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-22",
+    "to": "2027-09-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/646517"
+  },
+  {
+   "id": "br-aneel-27707397000102",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "27707397000102",
+    "name": "CERCI"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.50089,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 1126,24 + TE 374,65 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 1.464, DE 28 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-29",
+    "to": "2027-04-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/620697"
+  },
+  {
+   "id": "br-aneel-28152650000171",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "28152650000171",
+    "name": "EDP ES"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.84371,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 506,32 + TE 337,39 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.600, DE 31 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-07",
+    "to": "2027-08-06"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/638446"
+  },
+  {
+   "id": "br-aneel-28610236000169",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "28610236000169",
+    "name": "CERAL ARARUAMA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.20634,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 1057,90 + TE 148,44 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 1.463, DE 28 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-29",
+    "to": "2027-04-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/620319"
+  },
+  {
+   "id": "br-aneel-30460297000139",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "30460297000139",
+    "name": "CASTRO-DIS"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.76917,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 467,21 + TE 301,96 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.813, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/632672"
+  },
+  {
+   "id": "br-aneel-31465487000101",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "31465487000101",
+    "name": "CERES"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.56923,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 1163,67 + TE 405,56 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 1.454, DE 28 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-29",
+    "to": "2027-04-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/621082"
+  },
+  {
+   "id": "br-aneel-33050071000158",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "33050071000158",
+    "name": "ENEL RJ"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.0611,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 731,72 + TE 329,38 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.570, DE 10 DE MARÇO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-03-15",
+    "to": "2027-03-14"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/613773"
+  },
+  {
+   "id": "br-aneel-33050196000188",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "33050196000188",
+    "name": "CPFL-PAULISTA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.73945,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 449,25 + TE 290,20 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.579, DE 22 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-08",
+    "to": "2027-04-07"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/615259"
+  },
+  {
+   "id": "br-aneel-44560381000139",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "44560381000139",
+    "name": "CERPRO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.74253,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 519,98 + TE 222,55 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 1.906, DE 26 DE MAIO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-05-29",
+    "to": "2027-05-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/625527"
+  },
+  {
+   "id": "br-aneel-46598678000119",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "46598678000119",
+    "name": "CERRP"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.74254,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 574,00 + TE 168,54 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 1.904, DE 26 DE MAIO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-05-29",
+    "to": "2027-05-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/625905"
+  },
+  {
+   "id": "br-aneel-49313653000110",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "49313653000110",
+    "name": "CETRIL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.90998,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 652,10 + TE 257,88 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.553, DE 25 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-11-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/583675"
+  },
+  {
+   "id": "br-aneel-49606312000132",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "49606312000132",
+    "name": "CERIPa"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.82118,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 647,17 + TE 174,01 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 1.462, DE 28 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-29",
+    "to": "2027-04-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/621461"
+  },
+  {
+   "id": "br-aneel-50105865000190",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "50105865000190",
+    "name": "CEDRI"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.99871,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 644,57 + TE 354,14 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.760, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/646898"
+  },
+  {
+   "id": "br-aneel-50235449000107",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "50235449000107",
+    "name": "CERIM"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.88226,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 623,06 + TE 259,20 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.551, DE 25 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-11-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/577105"
+  },
+  {
+   "id": "br-aneel-52548732000114",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "52548732000114",
+    "name": "CERMC"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.96908,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 623,17 + TE 345,91 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.552, DE 25 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-11-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/578244"
+  },
+  {
+   "id": "br-aneel-52777034000190",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "52777034000190",
+    "name": "CEMIRIM"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.73223,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 494,47 + TE 237,76 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 1.901, DE 26 DE MAIO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-05-29",
+    "to": "2027-05-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/624767"
+  },
+  {
+   "id": "br-aneel-53176038000186",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "53176038000186",
+    "name": "CERNHE"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.8223,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 626,79 + TE 195,51 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.770, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/650747"
+  },
+  {
+   "id": "br-aneel-53859112000169",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "53859112000169",
+    "name": "CPFL Santa Cruz"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.81258,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 560,39 + TE 252,19 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.580, DE 22 DE ABRIL DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-04-22",
+    "to": "2027-04-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/618454"
+  },
+  {
+   "id": "br-aneel-55188502000180",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "55188502000180",
+    "name": "CERVAM"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.93721,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 703,23 + TE 233,98 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.779, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/652649"
+  },
+  {
+   "id": "br-aneel-57384943000182",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "57384943000182",
+    "name": "CERIS"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.11512,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 754,29 + TE 360,83 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.814, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/634640"
+  },
+  {
+   "id": "br-aneel-60196987000193",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "60196987000193",
+    "name": "CEDRAP"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.09084,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 825,44 + TE 265,40 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.549, DE 25 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-11-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/566018"
+  },
+  {
+   "id": "br-aneel-60444437000146",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "60444437000146",
+    "name": "LIGHT SESA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.88056,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 578,56 + TE 302,00 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.571, DE 10 DE MARÇO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-03-15",
+    "to": "2027-03-14"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/614376"
+  },
+  {
+   "id": "br-aneel-61695227000193",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "61695227000193",
+    "name": "ELETROPAULO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.78938,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 472,42 + TE 316,96 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.596, DE 3 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-04",
+    "to": "2027-07-03"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/629360"
+  },
+  {
+   "id": "br-aneel-75568154000183",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "75568154000183",
+    "name": "COOPERMILA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.72763,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 496,49 + TE 231,14 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.776, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/654262"
+  },
+  {
+   "id": "br-aneel-75805895000130",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "75805895000130",
+    "name": "COCEL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.73437,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 441,34 + TE 293,03 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.595, DE 30 DE JUNHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-06-29",
+    "to": "2027-06-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/628734"
+  },
+  {
+   "id": "br-aneel-75826404000138",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "75826404000138",
+    "name": "CERAL ANITÁPOLIS"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.0019,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 780,93 + TE 220,97 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.550, DE 25 DE NOVEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-11-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/572089"
+  },
+  {
+   "id": "br-aneel-76583962000182",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "76583962000182",
+    "name": "CERTREL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.2242,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 1007,01 + TE 217,19 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.774, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/652271"
+  },
+  {
+   "id": "br-aneel-78274610000170",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "78274610000170",
+    "name": "CEPRAG"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.86385,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 642,08 + TE 221,77 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.563, DE 9 DE DEZEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-12-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/571328"
+  },
+  {
+   "id": "br-aneel-78829843000192",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "78829843000192",
+    "name": "COOPERZEM"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.48404,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 274,40 + TE 209,64 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.782, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/654644"
+  },
+  {
+   "id": "br-aneel-79850574000109",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "79850574000109",
+    "name": "PACTO ENERGIA PR"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.76802,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 457,17 + TE 310,85 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.606, DE 26 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-06-26",
+    "to": "2027-06-25"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/628282"
+  },
+  {
+   "id": "br-aneel-82574864000181",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "82574864000181",
+    "name": "CEREJ"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.05956,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 762,92 + TE 296,64 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.765, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/648811"
+  },
+  {
+   "id": "br-aneel-83646653000170",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "83646653000170",
+    "name": "COOPERA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.7226,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 558,27 + TE 164,33 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.775, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/653460"
+  },
+  {
+   "id": "br-aneel-83647990000181",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "83647990000181",
+    "name": "COOPERALIANÇA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.75773,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 499,44 + TE 258,29 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.398, DE 28 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-29",
+    "to": "2027-08-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/644327"
+  },
+  {
+   "id": "br-aneel-83855973000130",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "83855973000130",
+    "name": "DCELT"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.75975,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 414,04 + TE 345,71 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.380, DE 28 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-29",
+    "to": "2027-08-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/644708"
+  },
+  {
+   "id": "br-aneel-85318640000105",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "85318640000105",
+    "name": "CERPALO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.01971,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 698,52 + TE 321,19 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.771, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/651131"
+  },
+  {
+   "id": "br-aneel-85665990000130",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "85665990000130",
+    "name": "CEJAMA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.77015,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 558,70 + TE 211,45 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.762, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/647655"
+  },
+  {
+   "id": "br-aneel-86301124000122",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86301124000122",
+    "name": "EFLJC"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.75975,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 414,04 + TE 345,71 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.392, DE 28 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-29",
+    "to": "2027-08-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/645091"
+  },
+  {
+   "id": "br-aneel-86433042000131",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86433042000131",
+    "name": "CERBRANORTE"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.65158,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 431,78 + TE 219,80 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.764, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/648431"
+  },
+  {
+   "id": "br-aneel-86439510000185",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86439510000185",
+    "name": "CERGAL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.8658,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 606,43 + TE 259,37 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.767, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/649186"
+  },
+  {
+   "id": "br-aneel-86444163000189",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86444163000189",
+    "name": "CEGERO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.58605,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 345,30 + TE 240,75 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.761, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/647278"
+  },
+  {
+   "id": "br-aneel-86448057000173",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86448057000173",
+    "name": "COORSEL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.58974,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 377,78 + TE 211,96 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.777, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/655018"
+  },
+  {
+   "id": "br-aneel-86449170000173",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86449170000173",
+    "name": "CERGRAL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.49029,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 255,23 + TE 235,06 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.769, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/649951"
+  },
+  {
+   "id": "br-aneel-86512670000102",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86512670000102",
+    "name": "CERSUL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.71059,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 390,60 + TE 319,99 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.773, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/651886"
+  },
+  {
+   "id": "br-aneel-86531175000140",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86531175000140",
+    "name": "EFLUL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.75975,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 414,04 + TE 345,71 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.395, DE 28 DE AGOSTO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-08-29",
+    "to": "2027-08-28"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/645508"
+  },
+  {
+   "id": "br-aneel-86532348000145",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86532348000145",
+    "name": "COOPERCOCAL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.79627,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 466,94 + TE 329,33 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.781, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/653882"
+  },
+  {
+   "id": "br-aneel-86533346000170",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "86533346000170",
+    "name": "CERMOFUL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.91791,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 613,88 + TE 304,03 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.778, DE 30 DE SETEMBRO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-09-30",
+    "to": "2027-09-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/650367"
+  },
+  {
+   "id": "br-aneel-87462750000163",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "87462750000163",
+    "name": "COOPERSUL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.73771,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 559,08 + TE 178,63 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.562, DE 9 DE DEZEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-12-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/588513"
+  },
+  {
+   "id": "br-aneel-87656989000174",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "87656989000174",
+    "name": "CERILUZ"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.64921,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 414,37 + TE 234,84 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.854, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/634264"
+  },
+  {
+   "id": "br-aneel-87776043000141",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "87776043000141",
+    "name": "CELETRO"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.96925,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 637,60 + TE 331,65 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.812, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/633053"
+  },
+  {
+   "id": "br-aneel-88022918000182",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "88022918000182",
+    "name": "COOPERNORTE"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.37113,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 974,26 + TE 396,87 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 3.561, DE 9 DE DEZEMBRO DE 2025.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-01-01",
+    "to": "2026-12-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/588133"
+  },
+  {
+   "id": "br-aneel-88446034000155",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "88446034000155",
+    "name": "ELETROCAR"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.79643,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 509,55 + TE 286,88 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.673, DE 22 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-22",
+    "to": "2027-07-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/631115"
+  },
+  {
+   "id": "br-aneel-89435598000155",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "89435598000155",
+    "name": "CNPJ 89435598000155"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 1.0538,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 726,42 + TE 327,38 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.845, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/637801"
+  },
+  {
+   "id": "br-aneel-89889604000144",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "89889604000144",
+    "name": "UHENPAL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.83515,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 548,77 + TE 286,38 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.674, DE 22 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-22",
+    "to": "2027-07-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/632294"
+  },
+  {
+   "id": "br-aneel-90660754000160",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "90660754000160",
+    "name": "COPREL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.71632,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 399,81 + TE 316,51 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.825, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/637027"
+  },
+  {
+   "id": "br-aneel-91950261000128",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "91950261000128",
+    "name": "CRELUZ-D"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.78561,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 543,71 + TE 241,90 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.847, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/637420"
+  },
+  {
+   "id": "br-aneel-91982348000187",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "91982348000187",
+    "name": "HIDROPAN"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.72897,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 456,26 + TE 272,71 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.678, DE 22 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-22",
+    "to": "2027-07-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/631511"
+  },
+  {
+   "id": "br-aneel-95289500000100",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "95289500000100",
+    "name": "DEMEI"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.76415,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 477,67 + TE 286,48 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.675, DE 22 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-22",
+    "to": "2027-07-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/630680"
+  },
+  {
+   "id": "br-aneel-95824322000161",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "95824322000161",
+    "name": "COOPERLUZ"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.62202,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 297,69 + TE 324,33 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.823, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/636600"
+  },
+  {
+   "id": "br-aneel-97081434000103",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "97081434000103",
+    "name": "CERMISSÕES"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.89089,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 619,34 + TE 271,55 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.815, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/635018"
+  },
+  {
+   "id": "br-aneel-97505838000179",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "97505838000179",
+    "name": "CERFOX"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.84077,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 618,14 + TE 222,63 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.840, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/633813"
+  },
+  {
+   "id": "br-aneel-97578090000134",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "97578090000134",
+    "name": "MUXENERGIA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.74458,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 471,72 + TE 272,86 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.680, DE 22 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-22",
+    "to": "2027-07-21"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/631890"
+  },
+  {
+   "id": "br-aneel-97839922000129",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "97839922000129",
+    "name": "CERTAJA"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.78042,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 498,46 + TE 281,96 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.822, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/635399"
+  },
+  {
+   "id": "br-aneel-98042963000152",
+   "country": "BR",
+   "region": null,
+   "utility": {
+    "id": "98042963000152",
+    "name": "CERTHIL"
+   },
+   "currency": "BRL",
+   "price_per_kwh": 0.72993,
+   "price_basis": "ANEEL homologated residential tariff (subgroup B1, conventional): TUSD 412,85 + TE 317,08 R$/MWh, divided by 1000. Excludes ICMS, PIS/COFINS, public lighting fee and tariff flag surcharges. RESOLUÇÃO HOMOLOGATÓRIA Nº 2.844, DE 30 DE JULHO DE 2026.",
+   "taxes_included": false,
+   "period": {
+    "from": "2026-07-30",
+    "to": "2027-07-29"
+   },
+   "source_record_id": "fcf2906c-7c32-4b9b-a637-054e7a5234f4/636174"
+  }
+ ]
+}

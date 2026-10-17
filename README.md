@@ -15,7 +15,8 @@ and how to add a country.
 | 🇺🇸 US | Room ACs, refrigerators, dryers, washers, dishwashers (annual kWh from DOE test procedures) | EPA ENERGY STAR API | ~6,700 models |
 | 🇺🇸 US | Average residential price per state, trailing 12 months | EIA Open Data API | 50 states + DC + US |
 | 🇺🇸 US | Utility tariff by ZIP (on-demand lookup, not stored) | OpenEI URDB | — |
-| 🇧🇷 BR | Planned: tariffs (ANEEL), appliances (INMETRO/PBE) | | |
+| 🇧🇷 BR | Residential tariff (B1, conventional) per distribution utility, in force today | ANEEL open data | 103 utilities |
+| 🇧🇷 BR | Planned: appliances (INMETRO/PBE) | | |
 
 ENERGY STAR only lists certified (efficient) models, so the US product data does not
 include the least efficient models on the market.
@@ -44,6 +45,7 @@ set -a; source .env; set +a
 uv run python -m sources.us.energystar     # -> data/us/products/*.json
 uv run python -m sources.us.eia            # -> data/us/tariffs/eia_state_average.json
 uv run python -m sources.us.openei 10001   # prints the current default tariff for a ZIP
+uv run python -m sources.br.aneel          # -> data/br/tariffs/aneel_residential.json (no key)
 
 uv run pytest -q
 uv run python -m tools.validate
@@ -64,13 +66,17 @@ A weekly GitHub Action re-fetches everything and opens a PR with the diff.
   $/kWh, so the lookup returns `price_per_kwh: null` plus a range and fixed charge.
   The EIA state average is the reliable default.
 - **EIA doesn't say whether its revenue figures include taxes**, so `taxes_included` is `null`.
+- **ANEEL tariffs exclude taxes and surcharges** (ICMS, PIS/COFINS, public lighting fee,
+  tariff flags), so real bills are higher; `taxes_included` is `false`. The dataset doesn't
+  say which state a utility serves, so `region` is `null`.
 - **Gas dryers:** `annual_kwh` covers electricity only, not gas.
 - **No retail prices yet.** Government datasets don't include them.
 
 ## Licenses
 
 Code: see LICENSE (to be chosen). Data keeps its upstream terms, recorded in each
-file's `source.license`. US federal data (ENERGY STAR, EIA) is public domain.
+file's `source.license`. US federal data (ENERGY STAR, EIA) is public domain. ANEEL data is under the ODbL, which requires attribution and share-alike for
+derived databases.
 
 The prototype calculator UI is in `truecost-energy.html`; it still uses sample data and
 will be rewired to `data/` later.
