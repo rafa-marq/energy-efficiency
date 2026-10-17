@@ -15,7 +15,8 @@ and how to add a country.
 | 🇺🇸 US | Room ACs, refrigerators, dryers, washers, dishwashers (annual kWh from DOE test procedures) | EPA ENERGY STAR API | ~6,700 models |
 | 🇺🇸 US | Average residential price per state, trailing 12 months | EIA Open Data API | 50 states + DC + US |
 | 🇺🇸 US | Utility tariff by ZIP (on-demand lookup, not stored) | OpenEI URDB | — |
-| 🇧🇷 BR | Residential tariff (B1, conventional) per distribution utility, in force today | ANEEL open data | 103 utilities |
+| 🇧🇷 BR | Full tariff tables in force today: group A (A1–A4, AS; Azul, Verde) demand and energy charges by time slot, group B (B1–B4; Convencional, Branca, pre-paid) by subclass | ANEEL open data | 10,800 lines, 103 utilities |
+| 🇧🇷 BR | Residential price per utility (B1 conventional), for the calculator | ANEEL open data | 103 utilities |
 | 🇧🇷 BR | Planned: appliances (INMETRO/PBE) | | |
 
 ENERGY STAR only lists certified (efficient) models, so the US product data does not
@@ -45,7 +46,7 @@ set -a; source .env; set +a
 uv run python -m sources.us.energystar     # -> data/us/products/*.json
 uv run python -m sources.us.eia            # -> data/us/tariffs/eia_state_average.json
 uv run python -m sources.us.openei 10001   # prints the current default tariff for a ZIP
-uv run python -m sources.br.aneel          # -> data/br/tariffs/aneel_residential.json (no key)
+uv run python -m sources.br.aneel          # -> data/br/tariffs/aneel_{components,residential}.json (no key)
 
 uv run pytest -q
 uv run python -m tools.validate
@@ -67,7 +68,10 @@ A weekly GitHub Action re-fetches everything and opens a PR with the diff.
   The EIA state average is the reliable default.
 - **EIA doesn't say whether its revenue figures include taxes**, so `taxes_included` is `null`.
 - **ANEEL tariffs exclude taxes and surcharges** (ICMS, PIS/COFINS, public lighting fee,
-  tariff flags), so real bills are higher; `taxes_included` is `false`. The dataset doesn't
+  tariff flags); `taxes_included` is `false`. Each record also carries a with-taxes figure
+  using **project-standard assumptions: ICMS 18%, PIS/COFINS 3.65%**, applied the Brazilian
+  way (on the gross amount): `tariff / (1 - 0.18 - 0.0365)`. Real ICMS varies by state and
+  consumption band, so treat it as an estimate. The official value is never altered. The dataset doesn't
   say which state a utility serves, so `region` is `null`.
 - **Gas dryers:** `annual_kwh` covers electricity only, not gas.
 - **No retail prices yet.** Government datasets don't include them.

@@ -42,6 +42,17 @@
       }
     },
     "source_record_id": {"type": "string"},
+    "with_assumed_taxes": {
+      "type": ["object", "null"],
+      "description": "Price with taxes added at assumed rates the source does not publish. Kept separate so price_per_kwh stays as published.",
+      "required": ["value", "rates", "basis"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {"type": "number"},
+        "rates": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0, "exclusiveMaximum": 1}},
+        "basis": {"type": "string"}
+      }
+    },
     "structure": {
       "type": "object",
       "description": "Optional summary of a utility tariff's shape, copied from the source.",

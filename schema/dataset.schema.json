@@ -2,13 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "dataset.schema.json",
   "title": "Dataset file",
-  "description": "Envelope for every file under data/. Records are either products or tariffs.",
+  "description": "Envelope for every file under data/. Records are products, tariffs or tariff components.",
   "type": "object",
   "required": ["dataset", "kind", "source", "fetched_at", "count", "records"],
   "additionalProperties": false,
   "properties": {
     "dataset": {"type": "string", "pattern": "^[a-z]{2}/(products|tariffs)/[a-z0-9_]+$"},
-    "kind": {"enum": ["product", "tariff"]},
+    "kind": {"enum": ["product", "tariff", "tariff_component"]},
     "source": {
       "type": "object",
       "required": ["name", "publisher", "url", "license"],

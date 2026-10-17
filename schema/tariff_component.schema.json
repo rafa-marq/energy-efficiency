@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tariff_component.schema.json",
+  "title": "Tariff component record",
+  "description": "One line of a utility's published tariff table (e.g. a demand or energy charge for a customer group and time slot), in the source's units. Values are copied from the source; missing values are null.",
+  "type": "object",
+  "required": ["id", "country", "utility", "currency", "subgroup", "modality", "class", "subclass", "detail", "time_slot", "unit", "tusd", "te", "total", "taxes_included", "total_with_assumed_taxes", "resolution", "period", "source_record_id"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z]{2}-[a-z0-9]+-[A-Za-z0-9_.-]+$"},
+    "country": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "utility": {"type": "object", "required": ["id", "name"], "additionalProperties": false, "properties": {"id": {"type": "string"}, "name": {"type": "string"}}},
+    "currency": {"type": "string", "pattern": "^[A-Z]{3}$"},
+    "subgroup": {"type": "string", "description": "Voltage/customer subgroup, e.g. A4, B1."},
+    "modality": {"type": "string", "description": "Tariff modality, e.g. Azul, Verde, Convencional, Branca."},
+    "class": {"type": ["string", "null"]},
+    "subclass": {"type": ["string", "null"]},
+    "detail": {"type": ["string", "null"], "description": "Source qualifier, e.g. SCEE (net metering), APE (self-producer)."},
+    "time_slot": {"type": ["string", "null"], "description": "e.g. Ponta, Fora ponta, Intermediário; null when the line has none."},
+    "unit": {"enum": ["BRL/MWh", "BRL/kW"]},
+    "tusd": {"type": ["number", "null"], "description": "Distribution system use charge (TUSD). Negative for credits (e.g. SCEE net-metering lines)."},
+    "te": {"type": ["number", "null"], "description": "Energy charge (TE)."},
+    "total": {"type": ["number", "null"], "description": "tusd + te."},
+    "taxes_included": {"type": ["boolean", "null"]},
+    "resolution": {"type": ["string", "null"], "description": "The regulatory act that set this tariff."},
+    "period": {"type": "object", "required": ["from", "to"], "additionalProperties": false, "properties": {"from": {"type": "string"}, "to": {"type": ["string", "null"]}}},
+    "source_record_id": {"type": "string"},
+    "total_with_assumed_taxes": {"type": ["number", "null"], "description": "total with taxes added at the assumed rates given in the dataset's source.notes. Not published by the source."}
+  }
+}

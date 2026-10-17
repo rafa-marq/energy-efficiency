@@ -8,7 +8,10 @@ people can trust. That trust depends on a few hard rules.
 1. **Every number comes from an official or primary source**: a government efficiency
    program, regulator or statistics agency. No blog posts, retailer copy or "typical" values.
 2. **Missing stays missing.** If the source doesn't publish a value, write `null`.
-   No placeholders, fallbacks or estimates.
+   No placeholders, fallbacks or estimates. The one exception is a documented
+   project-standard assumption (e.g. Brazil's tax rates): it goes in a separate,
+   clearly named field next to the official value, never in place of it, and the
+   dataset's `source.notes` says what was assumed.
 3. **Derived values say how they were derived.** If you compute something (e.g. revenue /
    sales), describe the formula in the record's `price_basis` or `kwh_basis`.
 4. **Keep records traceable.** Each record has `source_record_id`; each file has

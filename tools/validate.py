@@ -23,6 +23,7 @@ ANNUAL_KWH_BOUNDS = {
     "dishwasher": (50, 1000),
 }
 PRICE_PER_KWH_BOUNDS = {"USD": (0.02, 1.50), "BRL": (0.10, 5.00)}
+COMPONENT_MAX = {"BRL/MWh": 10000, "BRL/kW": 1000}
 
 
 def load(name):
@@ -34,6 +35,7 @@ def main():
     record_v = {
         "product": Draft202012Validator(load("product.schema.json")),
         "tariff": Draft202012Validator(load("tariff.schema.json")),
+        "tariff_component": Draft202012Validator(load("tariff_component.schema.json")),
     }
     categories = load("categories.json")
     errors = []
@@ -66,6 +68,11 @@ def main():
                 kwh = r.get("annual_kwh")
                 if kwh is not None and not lo <= kwh <= hi:
                     errors.append(f"{rel} [{rid}]: annual_kwh {kwh} outside {lo}-{hi}")
+            elif doc["kind"] == "tariff_component":
+                hi = COMPONENT_MAX.get(r.get("unit"), float("inf"))
+                t = r.get("total")
+                if t is not None and t > hi:
+                    errors.append(f"{rel} [{rid}]: total {t} {r.get('unit')} above {hi}")
             else:
                 lo, hi = PRICE_PER_KWH_BOUNDS.get(r.get("currency"), (0, float("inf")))
                 p = r.get("price_per_kwh")
