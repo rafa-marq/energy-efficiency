@@ -100,13 +100,25 @@
   .eok{color:var(--green);font-size:14px;margin-top:12px;display:none}
   .efine{font-size:12px;color:var(--grey);margin-top:12px}
 
-  .disc{font-size:11.5px;color:var(--grey);text-align:center;margin-top:14px;font-style:italic}
+  .ratebar input.yrs{display:inline-block;width:64px}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+  .filters select{flex:1;min-width:160px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:14px;font-family:inherit;background:var(--bg)}
+  .filters select:focus{outline:none;border-color:var(--blue)}
+  .vs .prices{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;margin:-8px 0 18px}
+  .vs .prices input{border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:14px;font-family:inherit;width:100%}
+  .vs .prices input:focus{outline:none;border-color:var(--blue)}
+  .vs .prices span{visibility:hidden}
+  .msg{font-size:14px;color:var(--grey);padding:12px 0}
+  .disc{font-size:11.5px;color:var(--grey);margin-top:22px;padding-top:14px;border-top:1px solid var(--line);line-height:1.6}
+  .disc a{color:var(--grey)}
   footer{text-align:center;padding:46px 0;font-size:12px;color:var(--grey)}
 
   @media(max-width:620px){
     .grid{grid-template-columns:repeat(2,1fr)}
     .vs .pick{grid-template-columns:1fr}
     .vs .x{display:none}
+    .vs .prices{grid-template-columns:1fr}
+    .vs .prices span{display:none}
     .efrm{flex-direction:column}
     .logo{font-size:34px}
     .model{grid-template-columns:auto 1fr;gap:10px}
@@ -123,12 +135,12 @@
   </div>
 
   <div class="grid" id="grid">
-    <div class="tile" data-key="ac"><span class="ic">❄️</span><span class="nm">Window AC</span></div>
-    <div class="tile" data-key="fridge"><span class="ic">🧊</span><span class="nm">Refrigerator</span></div>
-    <div class="tile" data-key="dryer"><span class="ic">🌀</span><span class="nm">Dryer</span></div>
-    <div class="tile" data-key="heater"><span class="ic">🔥</span><span class="nm">Space heater</span></div>
+    <div class="tile" data-key="room_ac"><span class="ic">❄️</span><span class="nm">Room AC</span></div>
+    <div class="tile" data-key="refrigerator"><span class="ic">🧊</span><span class="nm">Refrigerator</span></div>
+    <div class="tile" data-key="clothes_dryer"><span class="ic">🌀</span><span class="nm">Dryer</span></div>
+    <div class="tile" data-key="clothes_washer"><span class="ic">👕</span><span class="nm">Washer</span></div>
     <div class="tile" data-key="dishwasher"><span class="ic">🍽️</span><span class="nm">Dishwasher</span></div>
-    <div class="tile" data-key="washer"><span class="ic">👕</span><span class="nm">Washer</span></div>
+    <div class="tile soon"><span class="ic">🔥</span><span class="nm">Space heater</span></div>
     <div class="tile soon"><span class="ic">💧</span><span class="nm">Water heater</span></div>
     <div class="tile soon"><span class="ic">➕</span><span class="nm">More soon</span></div>
   </div>
@@ -141,18 +153,21 @@
     </div>
     <div class="pbody">
       <div class="ratebar">
-        <label>Electricity rate:</label>
+        <label for="util">Electricity price:</label>
         <select id="util">
-          <option value="0.17">US average — $0.17/kWh</option>
-          <option value="0.29">Con Edison, NY — $0.29</option>
-          <option value="0.33">PG&amp;E, CA — $0.33</option>
-          <option value="0.16">ComEd, IL — $0.16</option>
           <option value="custom">My own…</option>
         </select>
-        <input id="customrate" type="number" step="0.01" value="0.20" placeholder="$/kWh">
+        <input id="customrate" type="number" step="0.01" min="0" value="0.20" placeholder="$/kWh">
+        <label for="years">Years:</label>
+        <input id="years" class="yrs" type="number" step="1" min="1" max="30" value="10">
       </div>
 
-      <div class="reclabel"><span class="leaf">🌿</span> <span id="recHead">Most efficient to own — our picks</span></div>
+      <div class="filters">
+        <select id="fType" aria-label="Type"></select>
+        <select id="fSize" aria-label="Size"></select>
+      </div>
+
+      <div class="reclabel"><span class="leaf">🌿</span> <span id="recHead">Lowest electricity use in this group</span></div>
       <div id="reclist"></div>
 
       <div class="vs">
@@ -161,6 +176,11 @@
           <select id="selA"></select>
           <span class="x">vs</span>
           <select id="selB"></select>
+        </div>
+        <div class="prices">
+          <input id="priceA" type="number" min="0" step="1" placeholder="Price you were quoted ($), optional">
+          <span class="x">vs</span>
+          <input id="priceB" type="number" min="0" step="1" placeholder="Price you were quoted ($), optional">
         </div>
         <div class="bars">
           <div class="brow">
@@ -195,7 +215,7 @@
         <p class="efine">No spam. Unsubscribe anytime.</p>
       </div>
 
-      <div class="disc">Sample model data shown for demonstration. Live version pulls verified specs from the ENERGY STAR product database.</div>
+      <div class="disc" id="sources"></div>
     </div>
   </div>
 </div>
@@ -204,123 +224,209 @@
 
 <script>
 const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-// category meta: runtime hrs/day at full power, months/yr active
-// models: name, price $, watts (steady-state), star = ENERGY STAR-ish flag
+// Data comes from data/us/ (see README). The page must be served over HTTP
+// (e.g. `python3 -m http.server`), since browsers block fetch() from file://.
+const DATA='data/us/';
+
+// UI-only settings per category: which attribute to group by and size ranges
+// for the filter. The numbers shown to the user all come from the data files.
 const CATS={
-  ac:{ic:'❄️',nm:'Window AC',hrs:7,months:4,
-    ctx:'Assumes ~7 hrs/day in summer over ~4 months — the US average. 8,000 BTU class.',
-    models:[
-      {n:'Midea U-Shaped Inverter 8k',p:370,w:680,star:1},
-      {n:'LG Dual Inverter 8k',p:350,w:720,star:1},
-      {n:'Windmill Inverter 8k',p:395,w:700,star:1},
-      {n:'Frigidaire 8k (standard)',p:265,w:980,star:0},
-      {n:'GE Budget 8k (older design)',p:230,w:1150,star:0}
-    ]},
-  fridge:{ic:'🧊',nm:'Refrigerator',hrs:8,months:12,
-    ctx:'Runs all year; cycles on/off, ~8 hrs/day at full power. Standard ~20 cu ft.',
-    models:[
-      {n:'LG InstaView ENERGY STAR',p:1450,w:90,star:1},
-      {n:'Samsung Bespoke Efficient',p:1300,w:100,star:1},
-      {n:'Whirlpool Standard',p:900,w:140,star:0},
-      {n:'Budget Top-Freezer',p:650,w:180,star:0}
-    ]},
-  dryer:{ic:'🌀',nm:'Dryer',hrs:1,months:12,
-    ctx:'~1 hr/day average household use, year-round.',
-    models:[
-      {n:'Heat-Pump Dryer (ENERGY STAR)',p:1300,w:1000,star:1},
-      {n:'Standard Electric Vented',p:650,w:3000,star:0},
-      {n:'Budget Electric Vented',p:520,w:3300,star:0}
-    ]},
-  heater:{ic:'🔥',nm:'Space heater',hrs:5,months:4,
-    ctx:'~5 hrs/day over ~4 cold months. Note: most resistive heaters draw the same 1500W.',
-    models:[
-      {n:'Ceramic 1500W (eco-thermostat)',p:90,w:1500,star:0},
-      {n:'Infrared 1500W',p:120,w:1500,star:0},
-      {n:'Basic 1500W',p:40,w:1500,star:0}
-    ]},
-  dishwasher:{ic:'🍽️',nm:'Dishwasher',hrs:1,months:12,
-    ctx:'~1 cycle/day average, year-round.',
-    models:[
-      {n:'Bosch 300 (ENERGY STAR)',p:850,w:1100,star:1},
-      {n:'Standard Stainless',p:550,w:1400,star:0},
-      {n:'Budget Built-in',p:400,w:1700,star:0}
-    ]},
-  washer:{ic:'👕',nm:'Washer',hrs:0.7,months:12,
-    ctx:'~0.7 hr/day average household use, year-round.',
-    models:[
-      {n:'Front-Load HE (ENERGY STAR)',p:950,w:400,star:1},
-      {n:'Standard Top-Load',p:600,w:500,star:0},
-      {n:'Budget Top-Load',p:480,w:650,star:0}
-    ]}
+  room_ac:{ic:'❄️',nm:'Room air conditioner',typeAttr:'type',
+    bins:[[0,7000],[7000,10000],[10000,14000],[14000,20000],[20000,Infinity]]},
+  refrigerator:{ic:'🧊',nm:'Refrigerator',typeAttr:'type',
+    bins:[[0,5],[5,12],[12,18],[18,24],[24,Infinity]]},
+  clothes_dryer:{ic:'🌀',nm:'Clothes dryer',typeAttr:'product_type',
+    bins:[[0,5],[5,7.5],[7.5,Infinity]]},
+  clothes_washer:{ic:'👕',nm:'Clothes washer',typeAttr:'load_configuration',
+    bins:[[0,3],[3,4.5],[4.5,Infinity]]},
+  dishwasher:{ic:'🍽️',nm:'Dishwasher',typeAttr:'type',
+    bins:[[0,10],[10,14],[14,Infinity]]}
 };
+// Published federal-minimum kWh/yr, where ENERGY STAR lists it.
+const FED_KWH={refrigerator:'us_federal_standard_kwh_yr',dishwasher:'us_federal_standard_kwh_year'};
 
-let cat='ac';
-function rate(){return $('util').value==='custom'?(parseFloat($('customrate').value)||0):parseFloat($('util').value)}
+const cache={};
+let cat=null, rows=[], tariff=null;
+
+function rate(){
+  const v=$('util').value;
+  return v==='custom'?Math.max(0,parseFloat($('customrate').value)||0):+v;
+}
+function years(){return Math.min(30,Math.max(1,parseInt($('years').value)||10))}
 function fmt(n){return '$'+Math.round(n).toLocaleString()}
-function lifeKwhCost(m){const c=CATS[cat];const days=(c.months/12)*365;const yrs=10;return (m.w/1000)*c.hrs*days*yrs*rate()}
-function total(m){return m.p+lifeKwhCost(m)}
+function num(n,d=0){return (+n).toLocaleString(undefined,{maximumFractionDigits:d})}
+function elec(m){return m.annual_kwh*years()*rate()}
+function label(m){return `${m.brand} ${m.model}`}
+function capStr(m){return m.capacity&&m.capacity.value!=null?`${num(m.capacity.value,1)} ${m.capacity.unit}`:''}
+function binLabel(b,unit){
+  const [lo,hi]=b;
+  if(lo===0) return `Under ${num(hi)} ${unit}`;
+  if(hi===Infinity) return `${num(lo)}+ ${unit}`;
+  return `${num(lo)}–${num(hi)} ${unit}`;
+}
+function typeOf(m){return m.attributes[CATS[cat].typeAttr]||'Other'}
+function inBin(m,b){const v=m.capacity&&m.capacity.value;return v!=null&&v>=b[0]&&v<b[1]}
 
-function loadCat(k){
+async function getJSON(path){
+  if(!cache[path]){
+    cache[path]=fetch(DATA+path).then(r=>{if(!r.ok)throw new Error(r.status+' '+path);return r.json()});
+    cache[path].catch(()=>delete cache[path]);
+  }
+  return cache[path];
+}
+
+async function loadTariffs(){
+  try{
+    tariff=await getJSON('tariffs/eia_state_average.json');
+    const recs=tariff.records.filter(r=>r.price_per_kwh!=null);
+    const us=recs.find(r=>r.region.code==='US');
+    const states=recs.filter(r=>r!==us).sort((a,b)=>a.region.name.localeCompare(b.region.name));
+    const opt=r=>`<option value="${r.price_per_kwh}" data-id="${esc(r.id)}">${esc(r.region.name)} — $${r.price_per_kwh.toFixed(3)}/kWh</option>`;
+    $('util').innerHTML=(us?opt(us):'')+states.map(opt).join('')+'<option value="custom">My own…</option>';
+  }catch(e){
+    $('customrate').style.display='inline-block';
+  }
+}
+
+async function loadCat(k){
   cat=k;const c=CATS[k];
-  $('pIc').textContent=c.ic;$('pName').textContent=c.nm;$('pCtx').textContent=c.ctx+' Costs shown over 10 years.';
+  $('pIc').textContent=c.ic;$('pName').textContent=c.nm;$('pCtx').textContent='';
   document.querySelectorAll('.tile').forEach(t=>t.classList.toggle('on',t.dataset.key===k));
   $('panel').classList.add('show');
   $('emailbox').classList.remove('show');
+  $('reclist').innerHTML='<div class="msg">Loading models…</div>';
+  $('panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+  let ds;
+  try{ds=await getJSON(`products/${k}.json`)}
+  catch(e){
+    if(cat!==k)return;
+    $('reclist').innerHTML=`<div class="msg">Couldn't load ${esc(DATA)}products/${esc(k)}.json. If you opened this file directly, serve the repo instead: <code>python3 -m http.server</code>, then open <code>localhost:8000/truecost-energy.html</code>.</div>`;
+    return;
+  }
+  if(cat!==k)return;
+  c.ds=ds;
+  const usable=ds.records.filter(m=>m.annual_kwh!=null);
+  c.all=usable;
+  c.dropped=ds.records.length-usable.length;
 
-  // rank by total cost of ownership
-  const ranked=[...c.models].map(m=>({...m,t:total(m)})).sort((a,b)=>a.t-b.t);
-  const worst=Math.max(...ranked.map(m=>m.t));
+  // type filter: most common type first
+  const counts={};usable.forEach(m=>{const t=typeOf(m);counts[t]=(counts[t]||0)+1});
+  const types=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+  $('fType').innerHTML=types.map(t=>`<option value="${esc(t)}">${esc(t)} (${counts[t]})</option>`).join('');
+  fillSizes();
+}
+
+function fillSizes(){
+  const c=CATS[cat];const unit=(c.all[0]&&c.all[0].capacity||{}).unit||'';
+  const ofType=c.all.filter(m=>typeOf(m)===$('fType').value);
+  // default to the most common size: ranking across sizes isn't a fair comparison
+  let html=`<option value="">Any size (${ofType.length})</option>`, best='', bestN=0;
+  c.bins.forEach((b,i)=>{
+    const n=ofType.filter(m=>inBin(m,b)).length;
+    if(n) html+=`<option value="${i}">${esc(binLabel(b,unit))} (${n})</option>`;
+    if(n>bestN){best=String(i);bestN=n}
+  });
+  $('fSize').innerHTML=html;$('fSize').value=best;
+  applyFilters();
+}
+
+function applyFilters(){
+  const c=CATS[cat];const si=$('fSize').value;
+  rows=c.all.filter(m=>typeOf(m)===$('fType').value&&(si===''||inBin(m,c.bins[+si])))
+            .sort((a,b)=>a.annual_kwh-b.annual_kwh||label(a).localeCompare(label(b)));
+  const opts=rows.map((m,i)=>`<option value="${i}">${esc(label(m))} — ${num(m.annual_kwh)} kWh/yr</option>`).join('');
+  $('selA').innerHTML=opts;$('selB').innerHTML=opts;
+  $('selA').value=rows.length-1;   // highest use in the group
+  $('selB').value=0;               // lowest use
+  $('priceA').value='';$('priceB').value='';
+  render();
+}
+
+function render(){
+  if(!cat||!CATS[cat].all)return;
+  const c=CATS[cat];
+  $('pCtx').textContent=`${rows.length} ENERGY STAR certified models in this group. Electricity cost = rated kWh/yr × your price × ${years()} years.`;
+  if(!rows.length){$('reclist').innerHTML='<div class="msg">No models match.</div>';calc();renderSources();return}
+  const worst=rows[rows.length-1];
   let html='';
-  ranked.slice(0,3).forEach((m,i)=>{
-    const save=worst-m.t;
+  rows.slice(0,5).forEach((m,i)=>{
+    const save=elec(worst)-elec(m);
+    const bits=[`${num(m.annual_kwh)} kWh/yr`];
+    if(capStr(m)) bits.push(capStr(m));
+    if(m.efficiency&&m.efficiency.value!=null) bits.push(`${m.efficiency.metric} ${num(m.efficiency.value,2)}`);
+    const pct=m.attributes.percent_less_energy_use_than_us_federal_standard;
+    const fed=FED_KWH[cat]&&m.attributes[FED_KWH[cat]];
+    if(pct!=null) bits.push(`${num(pct)}% below federal minimum`);
+    else if(fed) bits.push(`federal minimum ${num(fed)} kWh/yr`);
     html+=`<div class="model${i===0?' best':''}">
       <div class="rank">${i+1}</div>
       <div class="info">
-        <div class="mn">${m.n}${m.star?'<span class="badge">★ efficient</span>':''}</div>
-        <div class="ms">${m.w} W · ${fmt(m.p)} to buy${save>20?` · <span class="savetag">saves ${fmt(save)} vs the cheapest sticker</span>`:''}</div>
+        <div class="mn">${esc(m.brand)} <span style="font-weight:400">${esc(m.model)}</span></div>
+        <div class="ms">${esc(bits.join(' · '))}${save>=1?` · <span class="savetag">saves ${fmt(save)} vs the highest-use model here</span>`:''}</div>
       </div>
-      <div class="cost"><div class="big">${fmt(m.t)}</div><div class="lbl">10-yr cost to own</div></div>
+      <div class="cost"><div class="big">${fmt(elec(m))}</div><div class="lbl">${years()}-yr electricity</div></div>
     </div>`;
   });
   $('reclist').innerHTML=html;
-
-  // populate compare dropdowns: default = cheapest-sticker vs best-efficiency
-  const byPrice=[...c.models].sort((a,b)=>a.p-b.p);
-  const opts=c.models.map((m,idx)=>`<option value="${idx}">${m.n}</option>`).join('');
-  $('selA').innerHTML=opts;$('selB').innerHTML=opts;
-  $('selA').value=c.models.indexOf(byPrice[0]);          // cheapest to buy
-  $('selB').value=c.models.indexOf(ranked[0]);           // best to own
   calc();
-  $('panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+  renderSources();
 }
 
+function price(id){const v=$(id).value;return v===''?null:Math.max(0,+v)}
+
 function calc(){
-  const c=CATS[cat];
-  const a=c.models[+$('selA').value], b=c.models[+$('selB').value];
-  const ea=lifeKwhCost(a), eb=lifeKwhCost(b), ta=a.p+ea, tb=b.p+eb;
-  $('naL').textContent=a.n;$('nbL').textContent=b.n;
+  const a=rows[+$('selA').value], b=rows[+$('selB').value];
+  if(!a||!b){$('naL').textContent=$('nbL').textContent='—';$('takeaway').textContent='';return}
+  const pa=price('priceA'), pb=price('priceB'), both=pa!=null&&pb!=null;
+  const ea=elec(a), eb=elec(b), ta=ea+(pa||0), tb=eb+(pb||0);
+  $('naL').textContent=label(a);$('nbL').textContent=label(b);
   $('taL').textContent=fmt(ta);$('tbL').textContent=fmt(tb);
   const max=Math.max(ta,tb,1);
-  $('paBar').style.width=(a.p/max*100)+'%';$('eaBar').style.width=(ea/max*100)+'%';
-  $('pbBar').style.width=(b.p/max*100)+'%';$('ebBar').style.width=(eb/max*100)+'%';
-  const diff=Math.abs(ta-tb);
-  if(Math.round(ta)===Math.round(tb)){$('takeaway').innerHTML='Both cost about the same to own.';}
-  else{
-    const winner=tb<ta?b:a, loser=tb<ta?a:b, wt=Math.min(ta,tb);
-    const upfront=winner.p-loser.p;
-    let line=`<b>${winner.n}</b> is cheaper to own by <b>${fmt(diff)}</b> over 10 years`;
-    if(upfront>0) line+=` — despite costing ${fmt(upfront)} more up front`;
-    $('takeaway').innerHTML=line+'.';
+  $('paBar').style.width=((pa||0)/max*100)+'%';$('eaBar').style.width=(ea/max*100)+'%';
+  $('pbBar').style.width=((pb||0)/max*100)+'%';$('ebBar').style.width=(eb/max*100)+'%';
+  const y=years();
+  if(a===b){$('takeaway').textContent='Pick two different models to compare.';return}
+  if(!both){
+    const lo=ea<=eb?a:b, d=Math.abs(ea-eb);
+    $('takeaway').innerHTML=Math.round(d)===0
+      ?'Both use about the same electricity.'
+      :`<b>${esc(label(lo))}</b> saves <b>${fmt(d)}</b> in electricity over ${y} years. Enter both prices to see the full cost to own.`;
+    return;
   }
+  if(Math.round(ta)===Math.round(tb)){$('takeaway').textContent='Both cost about the same to own.';return}
+  const [w,l,pw,pl]=tb<ta?[b,a,pb,pa]:[a,b,pa,pb];
+  let line=`<b>${esc(label(w))}</b> is cheaper to own by <b>${fmt(Math.abs(ta-tb))}</b> over ${y} years`;
+  if(pw>pl) line+=` — despite costing ${fmt(pw-pl)} more up front`;
+  $('takeaway').innerHTML=line+'.';
+}
+
+function renderSources(){
+  const ds=CATS[cat].ds;if(!ds)return;
+  const date=s=>esc((s||'').slice(0,10));
+  let h=`<b>Energy use:</b> <a href="${esc(ds.source.url)}" target="_blank" rel="noopener">${esc(ds.source.name)}</a> (${esc(ds.source.publisher)}), fetched ${date(ds.fetched_at)}. Rated annual kWh from the US DOE test procedure; real use depends on how you use it. ENERGY STAR lists only certified models, so the least efficient models on the market aren't here.`;
+  if(cat==='clothes_dryer') h+=' For gas dryers this is electricity only; gas use is not included.';
+  if(CATS[cat].dropped) h+=` ${CATS[cat].dropped} listed model(s) without a published kWh figure are not shown.`;
+  const o=$('util').selectedOptions[0];
+  const t=tariff&&o&&o.dataset.id&&tariff.records.find(r=>r.id===o.dataset.id);
+  if(t) h+=`<br><b>Electricity price:</b> ${esc(t.price_basis)} Source: <a href="${esc(tariff.source.url)}" target="_blank" rel="noopener">${esc(tariff.source.publisher)}</a>. Taxes included: ${t.taxes_included==null?'not stated':t.taxes_included?'yes':'no'}.`;
+  else h+='<br><b>Electricity price:</b> your own figure.';
+  h+=' Costs use today\'s price for every year, with no inflation or discounting. Purchase prices are not in any government dataset, so enter the ones you were quoted.';
+  $('sources').innerHTML=h;
 }
 
 document.querySelectorAll('.tile').forEach(t=>{
   if(t.classList.contains('soon'))return;
   t.addEventListener('click',()=>loadCat(t.dataset.key));
 });
-$('util').addEventListener('change',()=>{$('customrate').style.display=$('util').value==='custom'?'inline-block':'none';loadCat(cat)});
+$('util').addEventListener('change',()=>{$('customrate').style.display=$('util').value==='custom'?'inline-block':'none';render()});
+$('customrate').addEventListener('input',render);
+$('years').addEventListener('input',render);
+$('fType').addEventListener('change',fillSizes);
+$('fSize').addEventListener('change',applyFilters);
 $('selA').addEventListener('change',calc);$('selB').addEventListener('change',calc);
+$('priceA').addEventListener('input',calc);$('priceB').addEventListener('input',calc);
 
 function openEmail(mode){
   $('emailbox').classList.add('show');
@@ -336,57 +442,7 @@ $('join').addEventListener('click',()=>{
   else{$('email').focus();$('email').style.borderColor='#d93025';}
 });
 
-// ---- Live data loader -------------------------------------------------
-// Drop real files next to this page to replace the sample data:
-//   energystar_ac.json  -> [{n, brand, btu, ceer, w, star, p}]  (from fetch_energystar.py)
-//   rates.json          -> [{name, rate}]                       (from fetch_rates.py)
-// Prices (p) may be null in ENERGY STAR data; we keep the sample price as a
-// stand-in until a retailer feed fills them, and flag any model missing a price.
-async function hydrate(){
-  // utility rates
-  try{
-    const rr = await fetch('rates.json');
-    if(rr.ok){
-      const rates = await rr.json();
-      const sel = $('util');
-      sel.innerHTML = rates.map(r=>`<option value="${r.rate}">${r.name} — $${(+r.rate).toFixed(2)}/kWh</option>`).join('')
-        + '<option value="custom">My own…</option>';
-      mark('rates');
-    }
-  }catch(e){/* keep built-in rate list */}
-
-  // ENERGY STAR appliance data (AC first; extend per category as files land)
-  const map = {ac:'energystar_ac.json', fridge:'energystar_fridge.json',
-               dryer:'energystar_dryer.json', washer:'energystar_washer.json',
-               dishwasher:'energystar_dishwasher.json'};
-  for(const [key,file] of Object.entries(map)){
-    try{
-      const r = await fetch(file);
-      if(!r.ok) continue;
-      const models = await r.json();
-      if(Array.isArray(models) && models.length){
-        // carry a price stand-in where the feed has none, so ranking still works
-        const fallbackPrice = (CATS[key].models[0]||{}).p || 300;
-        CATS[key].models = models.map(m=>({
-          n:m.n, w:m.w, star:m.star?1:0,
-          p:(m.p!=null?m.p:fallbackPrice), priceKnown:(m.p!=null)
-        }));
-        CATS[key].live = true;
-      }
-    }catch(e){/* keep sample for this category */}
-  }
-  loadCat('ac');
-}
-function mark(what){
-  const d=document.querySelector('.disc');
-  if(d && d.dataset.live!=='1'){
-    d.dataset.live='1';
-    d.textContent='Live data: real ENERGY STAR specs and/or utility rates loaded. Prices shown are estimates until a retailer feed is connected.';
-    d.style.color='var(--green)'; d.style.fontStyle='normal';
-  }
-}
-
-hydrate();
+loadTariffs().then(()=>loadCat('room_ac'));
 </script>
 </body>
 </html>

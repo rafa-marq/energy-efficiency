@@ -72,5 +72,14 @@ A weekly GitHub Action re-fetches everything and opens a PR with the diff.
 Code: see LICENSE (to be chosen). Data keeps its upstream terms, recorded in each
 file's `source.license`. US federal data (ENERGY STAR, EIA) is public domain.
 
-The prototype calculator UI is in `truecost-energy.html`; it still uses sample data and
-will be rewired to `data/` later.
+## Calculator
+
+`truecost-energy.html` ranks models by rated annual kWh × electricity price × years,
+reading `data/us/` directly. Browsers block `fetch()` from `file://`, so serve the repo:
+
+```sh
+python3 -m http.server   # then open http://localhost:8000/truecost-energy.html
+```
+
+Prices come from the EIA state averages (or your own figure). There's no purchase-price
+data yet, so users can type in the prices they were quoted to see total cost to own.
