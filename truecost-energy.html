@@ -83,23 +83,6 @@
   .takeaway{text-align:center;margin-top:18px;font-size:15px}
   .takeaway b{font-weight:600}
 
-  /* share row -> email moment */
-  .share{display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap}
-  .sbtn{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 16px;font-size:14px;font-family:inherit;cursor:pointer;color:var(--ink)}
-  .sbtn:hover{border-color:var(--blue);color:var(--blue)}
-  .sbtn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
-  .sbtn.primary:hover{background:var(--blue-dk);color:#fff}
-
-  .emailbox{display:none;margin-top:18px;border-top:1px solid var(--line);padding-top:20px;text-align:center}
-  .emailbox.show{display:block;animation:fade .2s ease}
-  .emailbox h3{font-size:17px;font-weight:500;margin-bottom:6px}
-  .emailbox p{font-size:14px;color:var(--grey);max-width:42ch;margin:0 auto 16px}
-  .efrm{display:flex;gap:10px;max-width:420px;margin:0 auto}
-  .efrm input{flex:1;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:15px;font-family:inherit}
-  .efrm input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,115,232,.12)}
-  .eok{color:var(--green);font-size:14px;margin-top:12px;display:none}
-  .efine{font-size:12px;color:var(--grey);margin-top:12px}
-
   .ratebar input.yrs{display:inline-block;width:64px}
   .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
   .filters select{flex:1;min-width:160px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:14px;font-family:inherit;background:var(--bg)}
@@ -119,7 +102,6 @@
     .vs .x{display:none}
     .vs .prices{grid-template-columns:1fr}
     .vs .prices span{display:none}
-    .efrm{flex-direction:column}
     .logo{font-size:34px}
     .model{grid-template-columns:auto 1fr;gap:10px}
     .model .cost{grid-column:2;text-align:left;margin-top:4px}
@@ -197,22 +179,6 @@
           <span><span class="sw" style="background:var(--blue)"></span>Electricity over its life</span>
         </div>
         <div class="takeaway" id="takeaway"></div>
-      </div>
-
-      <div class="share">
-        <button class="sbtn primary" id="shareBtn">Share this comparison</button>
-        <button class="sbtn" id="saveBtn">Save my results</button>
-      </div>
-
-      <div class="emailbox" id="emailbox">
-        <h3 id="ebTitle">Send this comparison to your inbox</h3>
-        <p id="ebText">We'll email you this result so you have it while you shop — and ping you if the price drops on the model you picked.</p>
-        <div class="efrm">
-          <input id="email" type="email" placeholder="you@email.com">
-          <button class="sbtn primary" id="join">Send it</button>
-        </div>
-        <div class="eok" id="eok">✓ On its way. Happy shopping.</div>
-        <p class="efine">No spam. Unsubscribe anytime.</p>
       </div>
 
       <div class="disc" id="sources"></div>
@@ -295,7 +261,6 @@ async function loadCat(k){
   $('pIc').textContent=c.ic;$('pName').textContent=c.nm;$('pCtx').textContent='';
   document.querySelectorAll('.tile').forEach(t=>t.classList.toggle('on',t.dataset.key===k));
   $('panel').classList.add('show');
-  $('emailbox').classList.remove('show');
   $('reclist').innerHTML='<div class="msg">Loading models…</div>';
   $('panel').scrollIntoView({behavior:'smooth',block:'nearest'});
   let ds;
@@ -427,20 +392,6 @@ $('fType').addEventListener('change',fillSizes);
 $('fSize').addEventListener('change',applyFilters);
 $('selA').addEventListener('change',calc);$('selB').addEventListener('change',calc);
 $('priceA').addEventListener('input',calc);$('priceB').addEventListener('input',calc);
-
-function openEmail(mode){
-  $('emailbox').classList.add('show');
-  if(mode==='share'){$('ebTitle').textContent='Share this comparison';$('ebText').textContent="Enter your email and we'll send a link you can forward — plus a price-drop alert on the model you picked.";}
-  else{$('ebTitle').textContent='Save your results';$('ebText').textContent="We'll keep this comparison for you and ping you if the price drops on the model you're eyeing.";}
-  $('emailbox').scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-$('shareBtn').addEventListener('click',()=>openEmail('share'));
-$('saveBtn').addEventListener('click',()=>openEmail('save'));
-$('join').addEventListener('click',()=>{
-  const e=$('email').value.trim();
-  if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){$('eok').style.display='block';$('email').value='';}
-  else{$('email').focus();$('email').style.borderColor='#d93025';}
-});
 
 loadTariffs().then(()=>loadCat('room_ac'));
 </script>
